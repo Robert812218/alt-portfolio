@@ -1,21 +1,41 @@
+
 .app-container {
 	background-color: grey;
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .header-section {
 	align-self: flex-start;
-	width: 100%;
+	width: 90em;
+	height: 7em;
+	margin: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
 	border: 5px solid black;
 }
 
-.navbar-section {
-	
+.header-wrapper {
+	border: 5px solid red;
+	margin: 1em;
 }
 
-.about-section {
-	
+.nav-section {
+	border: 5px solid blue;
+	margin: 1em;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.render-area {
+	border: 5px solid black;
+	width: 90em;
+	margin: 1em;
+	height: 50em;
 }
