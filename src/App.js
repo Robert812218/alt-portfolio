@@ -28,21 +28,23 @@ export default function App() {
 				</div>
 				<div className="nav-section">
 					<button onClick={() => setActive("about")}>About Me</button>
-					<button onClick={() => setActive("skills")}>Skills</button>
-					<button onClick={() => setActive("academics")}>Academics</button>
+					<button onClick={() => setActive("skills-academics")}>Skills</button>
 					<button onClick={() => setActive("contact")}>Contact</button>
 					<button onClick={() => setActive("resume")}>Resume</button>
 					<button onClick={() => setActive("history")}>History</button>
 					<button onClick={() => setActive("projects")}>Projects</button>
 				</div>
 	  		</div>
+			<div>
+				<p></p>
+			</div>
 			<div className="render-area">
 				{active === "about" && 
 					<div>
 						<About />
 					</div>
 				}
-				{active === "skills" && 
+				{active === "skills-academics" && 
 					<div>
 						<Skills />
 					</div>
@@ -50,11 +52,6 @@ export default function App() {
 				{active === "contact" && 
 					<div>
 						<Contact />
-					</div>
-				}
-				{active === "academics" && 
-					<div>
-						<Academics />
 					</div>
 				}
 				{active === "resume" && 
