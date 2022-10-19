@@ -35,6 +35,12 @@
 	align-items: center;
 }
 
+.direction-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /* Page body */
 .render-area {
 	border: 5px solid black;

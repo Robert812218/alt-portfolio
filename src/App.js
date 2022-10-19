@@ -13,10 +13,10 @@ import Academics from "./Academics";
 // Github
 // Contact Me
 
-
 export default function App() {	
 	const [active, setActive] = useState("");
-		
+	
+	
 
 	return (
 		<div className="app-container">
@@ -25,12 +25,18 @@ export default function App() {
 					<h1>ROBERT KELLY</h1>
 				</div>
 				<div className="nav-section">
-					<button onClick={() => setActive("about")}>About Me</button>
-					<button onClick={() => setActive("skills-academics")}>Skills</button>
-					<button onClick={() => setActive("history")}>History</button>
-					<button onClick={() => setActive("projects")}>Projects</button>
+					<div className="nav-buttons">
+						<button onClick={() => setActive("about")}>About Me</button>
+						<button onClick={() => setActive("skills-academics")}>Skills</button>
+						<button onClick={() => setActive("history")}>History</button>
+						<button onClick={() => setActive("projects")}>Projects</button>
 
-					<button onClick={() => setActive("contact")}>Contact</button>
+						<button onClick={() => setActive("contact")}>Contact</button>
+					</div>
+					<div className="direction-buttons">
+						<button>left</button>
+						<button>right</button>
+					</div>
 				</div>
 	  		</div>
 			<div className="render-area">

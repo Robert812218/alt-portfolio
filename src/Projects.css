@@ -1,4 +1,3 @@
 .projects-container {
-	max-height: 50%;
-	width: 50%;
+	border: 5px solid green;
 }
