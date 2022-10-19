@@ -1,8 +1,9 @@
 import { useState } from "react";
+import "./Projects.css";
 
 export default function Projects() {
 	return (
-		<div className="projects-component">
+		<div className="projects-container">
 			<h1>Github.com/Robert812218</h1>
 			<h1>PROJECTS</h1>
 				<h2>Reverb (contributor):</h2>

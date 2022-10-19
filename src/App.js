@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 import Contact from "./Contact";
-import Skills from "./Skills";
+import SkillsAndTechnologies from "./SkillsAndTechs";
 import About from "./About";
 import History from "./History";
 import Projects from "./Projects";
@@ -33,32 +33,29 @@ export default function App() {
 					<button onClick={() => setActive("contact")}>Contact</button>
 				</div>
 	  		</div>
-			<div>
-				<p></p>
-			</div>
 			<div className="render-area">
 				{active === "about" && 
-					<div className="about-area">
+					<div className="section-wrapper">
 						<About />
 					</div>
 				}
 				{active === "skills-academics" && 
-					<div className="skills-area">
-						<Skills />
+					<div className="section-wrapper">
+						<SkillsAndTechnologies />
 					</div>
 				}
 				{active === "history" && 
-					<div className="history-area">
+					<div className="section-wrapper">
 						<History />
 					</div>
 				}
 				{active === "projects" && 
-					<div className="projects-area">
+					<div className="section-wrapper">
 						<Projects />
 					</div>
 				}
 				{active === "contact" && 
-					<div className="contacts-area">
+					<div className="section-wrapper">
 						<Contact />
 					</div>
 				}

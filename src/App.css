@@ -23,8 +23,9 @@
 
 
 .header-wrapper {
-	border: 5px solid red;
+	border: 5px solid black;
 	margin: 1em;
+	padding: 1%;
 }
 
 .nav-section {
@@ -40,4 +41,13 @@
 	width: 90%;
 	margin: 1em;
 	height: 50%;
+	overflow: scroll;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.section-wrapper {
+	display: flex;
+
 }

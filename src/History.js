@@ -4,7 +4,7 @@ import "./History.css";
 
 export default function History() {
 	return (
-		<div>
+		<div className="history-component">
 			<h1>HISTORY</h1>
 				<div className="job-container">
 					<h2>Web Development | Freelance | Remote</h2>
