@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import Contact from "./Contact";
 import Skills from "./Skills";
 import About from "./About";
-import Resume from "./Resume";
 import History from "./History";
 import Projects from "./Projects";
 import Academics from "./Academics";
@@ -16,9 +15,8 @@ import Academics from "./Academics";
 
 
 export default function App() {	
-	const [active, setActive] = useState("");	
-	
-	
+	const [active, setActive] = useState("");
+		
 
 	return (
 		<div className="app-container">
@@ -29,10 +27,10 @@ export default function App() {
 				<div className="nav-section">
 					<button onClick={() => setActive("about")}>About Me</button>
 					<button onClick={() => setActive("skills-academics")}>Skills</button>
-					<button onClick={() => setActive("contact")}>Contact</button>
-					<button onClick={() => setActive("resume")}>Resume</button>
 					<button onClick={() => setActive("history")}>History</button>
 					<button onClick={() => setActive("projects")}>Projects</button>
+
+					<button onClick={() => setActive("contact")}>Contact</button>
 				</div>
 	  		</div>
 			<div>
@@ -40,33 +38,28 @@ export default function App() {
 			</div>
 			<div className="render-area">
 				{active === "about" && 
-					<div>
+					<div className="about-area">
 						<About />
 					</div>
 				}
 				{active === "skills-academics" && 
-					<div>
+					<div className="skills-area">
 						<Skills />
 					</div>
 				}
-				{active === "contact" && 
-					<div>
-						<Contact />
-					</div>
-				}
-				{active === "resume" && 
-					<div>
-						<Resume />
-					</div>
-				}
 				{active === "history" && 
-					<div>
+					<div className="history-area">
 						<History />
 					</div>
 				}
 				{active === "projects" && 
-					<div>
+					<div className="projects-area">
 						<Projects />
+					</div>
+				}
+				{active === "contact" && 
+					<div className="contacts-area">
+						<Contact />
 					</div>
 				}
 			</div>
