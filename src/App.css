@@ -17,18 +17,15 @@
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	border: 5px solid black;
 }
 
 
 .header-wrapper {
-	border: 5px solid black;
 	margin: 1em;
 	padding: 1%;
 }
 
 .nav-section {
-	border: 5px solid blue;
 	margin: 1em;
 	justify-content: space-around;
 	align-items: center;
@@ -42,7 +39,6 @@
 
 /* Page body */
 .render-area {
-	border: 5px solid black;
 	width: 90%;
 	margin: 1em;
 	height: 50%;

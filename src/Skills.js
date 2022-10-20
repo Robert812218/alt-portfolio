@@ -4,7 +4,7 @@ import "./Skills.css";
 export default function Skills() {
 	return (
 		<div className="skills-component">
-
+			
                 	<h1>SKILLS</h1>
                         <ul>
                                 <li className="skill-item">UX & UI Design</li>

@@ -8,6 +8,8 @@ import About from "./About";
 import History from "./History";
 import Projects from "./Projects";
 import Academics from "./Academics";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // Home
 // About Me
 // Skills
@@ -24,7 +26,7 @@ function OutlineTypesExample() {
       <Button variant="outline-danger">Danger</Button>{' '}
       <Button variant="outline-info">Info</Button>{' '}
       <Button variant="outline-light">Light</Button>{' '}
-      <Button variant="outline-dark">Dark</Button>
+      <Button variant="outline-dark">Dark</Button>{' '}
     </>
   );
 }
@@ -44,11 +46,11 @@ export default function App() {
 				</div>
 				<div className="nav-section">
 					<div className="nav-buttons">
-						<Button onClick={() => setActive("about")}>About Me</Button>{' '}
-						<Button onClick={() => setActive("skills-academics")}>Skills</Button>{' '}
-						<Button onClick={() => setActive("history")}>History</Button>{' '}
-						<Button onClick={() => setActive("projects")}>Projects</Button>{' '}
-						<Button onClick={() => setActive("contact")}>Contact</Button>{' '}
+						<Button variant="outline-primary" onClick={() => setActive("about")}>About Me</Button>{' '}
+						<Button variant="outline-secondary" onClick={() => setActive("skills-academics")}>Skills</Button>{' '}
+						<Button variant="outline-warning" onClick={() => setActive("history")}>History</Button>{' '}
+						<Button variant="outline-info" onClick={() => setActive("projects")}>Projects</Button>{' '}
+						<Button variant="outline-success" onClick={() => setActive("contact")}>Contact</Button>{' '}
 					</div>
 					<div className="direction-buttons">
 						<Button variant="outline-light">left</Button>{' '}
