@@ -32,8 +32,9 @@ function OutlineTypesExample() {
 
 export default function App() {	
 	const [active, setActive] = useState("");
+			
 	
-	
+
 
 	return (
 		<div className="app-container">
