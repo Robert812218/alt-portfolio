@@ -3,7 +3,8 @@ import Education from "./Education";
 import Skills from "./Skills";
 import Technologies from "./Technologies";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Card';
+import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Placeholder from 'react-bootstrap/Placeholder';
 
@@ -65,40 +66,79 @@ function AnimationExample() {
 }
 
 export default function SkillsAndTechnologies() {
-	const [view, setView] = useState("");
-	
+	const [index, setIndex] = useState(0);
+
+	const handleSelect = (selectedIndex, e) => {
+		setIndex(selectedIndex);
+	}
 
 	return (
-		<div className="skills-and-techs-container">
-				<div className="education-area">
+		<Carousel activeIndex={index} onSelect={handleSelect} className="skills-and-techs-container">
+			<Carousel.Item>
+				{CardExample()}
+				<img
+					className="d-block w-100"
+					src="holder.js/800x400?text=First slide&bg=373940"
+					alt="First slide"
+				/>
+				<Carousel.Caption>
 					<h2>EDUCATION</h2>
-					<button onClick={() => setView("education")}>Education</button>					 {AnimationExample()}
-						{CardExample()}
-						{BasicExample()}
-						{view === "education" && 
-							<div>
-								<Education />
-							</div>
-						}
-				</div>
-				<div className="skills-area">
-				<h2>SKILLS</h2>
-				<button onClick={() => setView("skills")}>Skills</button>
-					{view === "skills" &&
-						<div>
-							<Skills />
-						</div>
-					}
-				</div>
-				<div className="technologies-area">
-				<h2>TECHNOLOGIES</h2>
-				<button onClick={() => setView("technologies")}>Expand</button>
-					{view === "technologies" && 
-						<div>
-							<Technologies />
-						</div>
-					}
-				</div>
-		</div>
-	);
+					<Button>ASDASD</Button>
+				</Carousel.Caption>
+			</Carousel.Item>
+			
+			<Carousel.Item>
+				{AnimationExample}
+				<img 
+					className="d-block w-100"
+					src="holder.js/800x400?text=Second slide&bg=373940"
+					alt="Second slide"
+				/>
+				<Carousel.Caption>
+					<h2>ASDASDAS</h2>	
+					<Button>ASDASDA</Button>
+				</Carousel.Caption>
+			</Carousel.Item>
+		</Carousel>
+	)
 }
+
+// export default function SkillsAndTechnologies() {
+// 	const [view, setView] = useState("");
+// 	
+// 	
+// 
+// 	return (
+// 		<div className="skills-and-techs-container">
+// 				<div className="education-area">
+// 					<h2>EDUCATION</h2>
+// 					<button onClick={() => setView("education")}>Education</button>					 {AnimationExample()}
+// 						{CardExample()}
+// 						{BasicExample()}
+// 						{view === "education" && 
+// 							<div>
+// 								<Education />
+// 							</div>
+// 						}
+// 				</div>
+// 				<div className="skills-area">
+// 				<h2>SKILLS</h2>
+// 				<button onClick={() => setView("skills")}>Skills</button>
+// 					{view === "skills" &&
+// 						<div>
+// 							<Skills />
+// 						</div>
+// 					}
+// 				</div>
+// 				<div className="technologies-area">
+// 				<h2>TECHNOLOGIES</h2>
+// 				<button onClick={() => setView("technologies")}>Expand</button>
+// 					{view === "technologies" && 
+// 						<div>
+// 							<Technologies />
+// 						</div>
+// 					}
+// 				</div>
+// 		</div>
+// 	);
+// }
