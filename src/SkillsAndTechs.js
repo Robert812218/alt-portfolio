@@ -3,142 +3,75 @@ import Education from "./Education";
 import Skills from "./Skills";
 import Technologies from "./Technologies";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Carousel from 'react-bootstrap/Carousel';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Placeholder from 'react-bootstrap/Placeholder';
+import Accordion from 'react-bootstrap/Accordion';
 
-function CardExample() {
-	return (
-		<div className="d-flex justify-content-around">
-			<Card style={{ width: '18rem' }}>
-				<Card.Img variant="top" src="holder.js/100px180" />
-				<Card.Body>
-					<Card.Title>Card Title</Card.Title>
-					<Card.Text>
-						Quick example text
-					</Card.Text>
-					<Button variant="primary">Go somewhere</Button>
-				</Card.Body>
-			</Card>
-
-			<Card style={{ width: '18rem' }}>
-				<Card.Img variant="top" src="holder.js/100px180" />
-				<Card.Body>
-					<Placeholder as={Card.Title} animation="glow">
-						<Placeholder xs={6} />
-					</Placeholder>
-					<Placeholder as={Card.Text} animation="glow">
-						<Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />
-						<Placeholder xs={6} /> <Placeholder xs={8} />
-					</Placeholder>
-					<Placeholder.Button variant="primary" xs={6} />
-				</Card.Body>
-			</Card>
-		</div>
-	);
-}
 
 function BasicExample() {
-	return (
-		<div>
-			<p aria-hidden="true">
-				<Placeholder xs={6} />	
-			</p>
-			
-			<Placeholder.Button xs={4} aria-hidden="true" />
-		</div>
-	);
-}
-
-
-function AnimationExample() {
   return (
-    <>
-      <Placeholder as="p" animation="glow">
-        <Placeholder xs={12} />
-      </Placeholder>
-      <Placeholder as="p" animation="wave">
-        <Placeholder xs={12} />
-      </Placeholder>
-    </>
+    <Accordion defaultActiveKey="0">
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>Accordion Item #1</Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>Accordion Item #2</Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
   );
 }
 
+
 export default function SkillsAndTechnologies() {
-	const [index, setIndex] = useState(0);
-
-	const handleSelect = (selectedIndex, e) => {
-		setIndex(selectedIndex);
-	}
-
-	return (
-		<Carousel activeIndex={index} onSelect={handleSelect} className="skills-and-techs-container">
-			<Carousel.Item>
-				{CardExample()}
-				<img
-					className="d-block w-100"
-					src="holder.js/800x400?text=First slide&bg=373940"
-					alt="First slide"
-				/>
-				<Carousel.Caption>
-					<h2>EDUCATION</h2>
-					<Button>ASDASD</Button>
-				</Carousel.Caption>
-			</Carousel.Item>
-			
-			<Carousel.Item>
-				{AnimationExample}
-				<img 
-					className="d-block w-100"
-					src="holder.js/800x400?text=Second slide&bg=373940"
-					alt="Second slide"
-				/>
-				<Carousel.Caption>
-					<h2>ASDASDAS</h2>	
-					<Button>ASDASDA</Button>
-				</Carousel.Caption>
-			</Carousel.Item>
-		</Carousel>
-	)
+	const [view, setView] = useState("");
+  	
+ 	 	
+  
+  	return (
+  		<div className="skills-and-techs-container">
+  				<div className="education-area">
+  					<h2>EDUCATION</h2>
+  					<button onClick={() => setView("education")}>Education</button>					 
+  						{view === "education" && 
+ 							<div>
+  								<Education />
+ 							</div>
+  						}
+  				</div>
+  				<div className="skills-area">
+  				<h2>SKILLS</h2>
+  				<button onClick={() => setView("skills")}>Skills</button>
+  					{view === "skills" &&
+  						<div>
+  							<Skills />
+  						</div>
+  					}
+  				</div>
+  				<div className="technologies-area">
+  				<h2>TECHNOLOGIES</h2>
+  				<button onClick={() => setView("technologies")}>Expand</button>
+  					{view === "technologies" && 
+  						<div>
+  							<Technologies />
+  						</div>
+  					}
+  				</div>
+  		</div>
+  	);
 }
-
-// export default function SkillsAndTechnologies() {
-// 	const [view, setView] = useState("");
-// 	
-// 	
-// 
-// 	return (
-// 		<div className="skills-and-techs-container">
-// 				<div className="education-area">
-// 					<h2>EDUCATION</h2>
-// 					<button onClick={() => setView("education")}>Education</button>					 {AnimationExample()}
-// 						{CardExample()}
-// 						{BasicExample()}
-// 						{view === "education" && 
-// 							<div>
-// 								<Education />
-// 							</div>
-// 						}
-// 				</div>
-// 				<div className="skills-area">
-// 				<h2>SKILLS</h2>
-// 				<button onClick={() => setView("skills")}>Skills</button>
-// 					{view === "skills" &&
-// 						<div>
-// 							<Skills />
-// 						</div>
-// 					}
-// 				</div>
-// 				<div className="technologies-area">
-// 				<h2>TECHNOLOGIES</h2>
-// 				<button onClick={() => setView("technologies")}>Expand</button>
-// 					{view === "technologies" && 
-// 						<div>
-// 							<Technologies />
-// 						</div>
-// 					}
-// 				</div>
-// 		</div>
-// 	);
-// }
