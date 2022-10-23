@@ -1,17 +1,22 @@
 body {
-	width: 100vh;
-	height: 100vw;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("../public/images/Muttart_Conservatory.jpg");
 }
 
 .app-container {
 	border: 5px solid red;
 	height: 100%;
-	background-image: url("../public/images/Muttart_Conservatory.jpg");
 	display: flex;
 	align-items: stretch;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+/* Name container */
+.header-wrapper {
+	border: 3px solid red;
 }
 
 /* Page top */
@@ -35,6 +40,7 @@ body {
 	margin: 1em;
 	justify-content: space-around;
 	align-items: center;
+	
 }
 
 .direction-buttons {

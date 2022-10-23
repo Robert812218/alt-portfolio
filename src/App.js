@@ -13,6 +13,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Card from 'react-bootstrap/Card';
+
 
 function OutlineTypesExample() {
   return (
@@ -29,22 +31,52 @@ function OutlineTypesExample() {
   );
 }
 
+function NameContainer() {
+	return (
+		<div className="header-wrapper">
+			<h1 className="name-header">ROBERT KELLY</h1>
+		</div>
+
+	);
+}
+
+function Naveroni() {
+	return (
+		<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+			<Container>
+				<Navbar.Brand href="#home">
+					ROBERT KELLY
+				</Navbar.Brand>
+				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+				<Navbar.Collapse id="responsive-navbar-nav">
+					<Nav className="me-auto">
+						<Nav.Link>ABOUT ME</Nav.Link>
+						<Nav.Link>SKILLS</Nav.Link>
+						<Nav.Link>HISTORY</Nav.Link>
+						<Nav.Link>PROJECTS</Nav.Link>
+						<Nav.Link>CONTACT</Nav.Link>
+						<Nav.Link><a href="https://github.com/Robert812218">GITHUB</a></Nav.Link>
+						<Nav.Link>LINKEDIN</Nav.Link>
+					</Nav>
+				</Navbar.Collapse>
+			</Container>
+		</Navbar>
+	);
+}
 
 export default function App() {	
 	const [active, setActive] = useState("");
 			
-	
+		
 		
 
 	return (
 		<body>
 		<div className="app-container">
-			
+			<Naveroni />
 	  		<div className="header-section">
-				<div className="header-wrapper">
-					<h1>ROBERT KELLY</h1>
-				</div>
-				<div className="nav-section">
+				<NameContainer />
+				<Navbar className="nav-section">
 					<div className="nav-buttons">
 						<Button variant="outline-primary" onClick={() => setActive("about")}>About Me</Button>{' '}
 						<Button variant="outline-secondary" onClick={() => setActive("skills-academics")}>Skills</Button>{' '}
@@ -56,7 +88,7 @@ export default function App() {
 						<Button variant="outline-light">left</Button>{' '}
 						<Button variant="outline-dark">right</Button>{' '}
 					</div>
-				</div>
+				</Navbar>
 	  		</div>
 			
 			<div className="render-area">
