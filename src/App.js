@@ -84,10 +84,6 @@ export default function App() {
 						<Button variant="outline-info" onClick={() => setActive("projects")}>Projects</Button>{' '}
 						<Button variant="outline-success" onClick={() => setActive("contact")}>Contact</Button>{' '}
 					</div>
-					<div className="direction-buttons">
-						<Button variant="outline-light">left</Button>{' '}
-						<Button variant="outline-dark">right</Button>{' '}
-					</div>
 				</Navbar>
 	  		</div>
 			

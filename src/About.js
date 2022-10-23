@@ -5,7 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function DescriptionContainer() {
 	return (
-		<div className=">
+		<div>
 
  			<p>
  					Analytical and solutions-driven professional with foundational knowledge in front-end and back-end web
