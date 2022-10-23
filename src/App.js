@@ -5,7 +5,7 @@ import CustomNav from "./CustomNav";
 import Contact from "./Contact";
 import SkillsAndTechnologies from "./SkillsAndTechs";
 import About from "./About";
-import History from "./History";
+import EduHistory from "./History";
 import Projects from "./Projects";
 import Academics from "./Academics";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,7 +14,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Card from 'react-bootstrap/Card';
-
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 function OutlineTypesExample() {
   return (
@@ -77,13 +77,13 @@ export default function App() {
 	  		<div className="header-section">
 				<NameContainer />
 				<Navbar className="nav-section">
-					<div className="nav-buttons">
+					<ButtonGroup className="nav-buttons">
 						<Button variant="outline-primary" onClick={() => setActive("about")}>About Me</Button>{' '}
 						<Button variant="outline-secondary" onClick={() => setActive("skills-academics")}>Skills</Button>{' '}
-						<Button variant="outline-warning" onClick={() => setActive("history")}>History</Button>{' '}
+						<Button variant="outline-warning" onClick={() => setActive("history")}>Education & History</Button>{' '}
 						<Button variant="outline-info" onClick={() => setActive("projects")}>Projects</Button>{' '}
 						<Button variant="outline-success" onClick={() => setActive("contact")}>Contact</Button>{' '}
-					</div>
+					</ButtonGroup>
 				</Navbar>
 	  		</div>
 			
@@ -100,7 +100,7 @@ export default function App() {
 				}
 				{active === "history" && 
 					<div className="section-wrapper">
-						<History />
+						<EduHistory />
 					</div>
 				}
 				{active === "projects" && 

@@ -7,9 +7,12 @@ import Accordion from "react-bootstrap/Accordion";
 export default function Projects() {
 	const [view, setView] = useState("");
 
+	
+
 	return (
 		<div className="projects-container">
 			<h1>PROJECTS</h1>
+			<div className="projects-details">
 			<Accordion defaultActiveKey="0">
 				<Accordion.Item eventKey="0">
 					<Accordion.Header>
@@ -53,6 +56,10 @@ export default function Projects() {
 					<p>A full-stack web application that allows users to shorten long URLs. Built with Node.js and Express.js.</p>
                         	</Accordion.Item>
 			</Accordion>
+			</div>
+			<div className="projects-render-area">
+				
+			</div>
 		</div>
 	);
 

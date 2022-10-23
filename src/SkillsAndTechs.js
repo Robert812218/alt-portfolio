@@ -5,12 +5,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 import './SkillsAndTechs.css';
 
 function Technologies() {
 	return (
 		<div className="technology-component">
-			<h1>TECHNOLOGY</h1>
+			
 		</div>
 	);
 }
@@ -51,7 +53,7 @@ function Skills() {
                 <div className="skills-component">
 
                         <h1>SKILLS</h1>
-                        <ul>
+                        <ul className="skill-items">
                                 <li className="skill-item">UX & UI Design</li>
                                 <li className="skill-item">Website Management</li>
                                 <li className="skill-item">Integration Testing</li>
@@ -70,22 +72,15 @@ function Skills() {
 export default function SkillsAndTechnologies() {
  	const [view, setView] = useState("");
  	  
-		
+			
  
    	return (
    		<div className="skills-and-techs-container">
 				<div className="skills-techs-buttons">
-   					<button onClick={() => setView("education")}>Education</button>					 
    					<button onClick={() => setView("skills")}>Skills</button>
- 			
    					<button onClick={() => setView("technologies")}>Technologies</button>
 				</div>
-				<div className="skills-techs-container">
-   				{view === "education" && 
-  					<div>
-   						<Education />
-  					</div>
-   				}
+				<div className="skills-and-techs-container">
    				{view === "skills" &&
    					<div>
    						<Skills />
