@@ -3,6 +3,13 @@ import "./About.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 
+function GitContainer() {
+	return (
+		<div>
+			<h1>GITHUB</h1>
+		</div>
+	);
+}
 
 
 export default function About() {
@@ -10,6 +17,7 @@ export default function About() {
 	return (
  		<div>
  			<h1>ABOUT</h1>
+				<GitContainer />	
  				<p>
  					Analytical and solutions-driven professional with foundational knowledge in front-end and back-end web
  development technologies, utilizing a variety of programming languages to create interactive and user-friendly,

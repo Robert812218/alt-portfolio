@@ -37,7 +37,9 @@ export default function App() {
 		
 
 	return (
+		<body>
 		<div className="app-container">
+			
 	  		<div className="header-section">
 				<div className="header-wrapper">
 					<h1>ROBERT KELLY</h1>
@@ -85,7 +87,8 @@ export default function App() {
 				}
 			</div>
 		</div>
-	)
+		</body>
+	);
 }
 
 
