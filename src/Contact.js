@@ -3,15 +3,6 @@ import Form from 'react-bootstrap/Form';
 import "./Contact.css";
 import Badge from 'react-bootstrap/Badge';
 
-function BadgeExample() {
-	return (
-		<div>
-			<h1>
-				Example heading <Badge bg="secondary">New</Badge>
-			</h1>
-		</div>
-	);
-}
 
 function BasicExample() {
   return (

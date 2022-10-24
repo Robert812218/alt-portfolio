@@ -5,7 +5,7 @@ import CustomNav from "./CustomNav";
 import Contact from "./Contact";
 import SkillsAndTechnologies from "./SkillsAndTechs";
 import About from "./About";
-import EduHistory from "./History";
+import HistoryAndEducation from "./HistoryAndEducation";
 import Projects from "./Projects";
 import Academics from "./Academics";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -40,7 +40,7 @@ function NameContainer() {
 	);
 }
 
-function Naveroni() {
+function Naveroni({props}) {
 	return (
 		<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
 			<Container>
@@ -67,7 +67,8 @@ function Naveroni() {
 export default function App() {	
 	const [active, setActive] = useState("");
 			
-		
+	
+	
 		
 
 	return (
@@ -79,7 +80,7 @@ export default function App() {
 				<Navbar className="nav-section">
 					<ButtonGroup className="nav-buttons">
 						<Button variant="outline-primary" onClick={() => setActive("about")}>About Me</Button>{' '}
-						<Button variant="outline-secondary" onClick={() => setActive("skills-academics")}>Skills</Button>{' '}
+						<Button variant="outline-secondary" onClick={() => setActive("skills-academics")}>Skills & Technologies</Button>{' '}
 						<Button variant="outline-warning" onClick={() => setActive("history")}>Education & History</Button>{' '}
 						<Button variant="outline-info" onClick={() => setActive("projects")}>Projects</Button>{' '}
 						<Button variant="outline-success" onClick={() => setActive("contact")}>Contact</Button>{' '}
@@ -100,7 +101,7 @@ export default function App() {
 				}
 				{active === "history" && 
 					<div className="section-wrapper">
-						<EduHistory />
+						<HistoryAndEducation />
 					</div>
 				}
 				{active === "projects" && 

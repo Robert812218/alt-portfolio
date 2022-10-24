@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./History.css";
+import "./HistoryAndEducation.css";
 import ListGroup from "react-bootstrap/ListGroup";
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
@@ -67,7 +67,7 @@ function History() {
 		
 	);
 }
-export default function EduHistory() {
+export default function HistoryAndEducation() {
 	
 	return (
 		<div className="education-history-container">

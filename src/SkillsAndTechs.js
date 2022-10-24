@@ -13,13 +13,15 @@ function Technologies() {
 	return (
 		<div className="technologies-container">
 			<ul> 
-				<li>Javascript Fundamentals</li>		
 				<li>HTML/CSS</li>
+				<li>Javascript Fundamentals</li>		
+				<li>JQuery</li>
 				<li>Node.js</li>
 				<li>Express.js</li>
 				<li>React.js</li>
+				<li>SQL/PostgreSQL</li>
 				<li>Rust</li>	
-				<li></li>
+				<li>Python</li>
 				<li>Elixir</li>
 				<li>Linux Operating Systems</li>
 				<li>Bash shell scripting</li>
