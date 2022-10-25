@@ -16,20 +16,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Card from 'react-bootstrap/Card';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
-function OutlineTypesExample() {
-  return (
-    <>
-      <Button variant="outline-primary">Primary</Button>{' '}
-      <Button variant="outline-secondary">Secondary</Button>{' '}
-      <Button variant="outline-success">Success</Button>{' '}
-      <Button variant="outline-warning">Warning</Button>{' '}
-      <Button variant="outline-danger">Danger</Button>{' '}
-      <Button variant="outline-info">Info</Button>{' '}
-      <Button variant="outline-light">Light</Button>{' '}
-      <Button variant="outline-dark">Dark</Button>{' '}
-    </>
-  );
-}
 
 function NameContainer() {
 	return (
@@ -39,6 +25,7 @@ function NameContainer() {
 
 	);
 }
+
 
 function Naveroni({props}) {
 	return (
@@ -74,7 +61,6 @@ export default function App() {
 	return (
 		<body>
 		<div className="app-container">
-			<Naveroni />
 	  		<div className="header-section">
 				<NameContainer />
 				<Navbar className="nav-section">
