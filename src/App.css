@@ -59,13 +59,7 @@ body {
 
 /* Page body */
 .render-area {
-	width: 90%;
-	margin: 1em;
-	height: 50%;
-	overflow: scroll;
 	display: flex;
-	justify-content: space-between;
-	flex-direction: column;
 	animation: fadeIn 3s;
 }
 
