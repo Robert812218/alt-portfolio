@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Projects.css";
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import Container from 'react-bootstrap/Container';
 
 
 function ProjectCards() {
@@ -91,9 +92,10 @@ export default function Projects() {
 
 	return (
 		<div className="projects-container">
+			<div className="repos-navbar">
+			</div>
+			<div className="cards-container">
 			{ProjectCards()}
-			<div className="gallery-component">
-				{TestCards()}
 			</div>
 		</div>
 	);
