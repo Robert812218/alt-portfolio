@@ -26,7 +26,70 @@ function NameContainer() {
 	);
 }
 
+function MainNav() {
+	const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
 
+	return (
+		<Nav variant="pills" activeKey="1" onSelect={handleSelect}>
+			<Nav.Item>
+				<Nav.Link eventKey="1">
+					About Me
+				</Nav.Link>
+				<Nav.Link eventKey="2">
+					<Button>
+					Skills & Technologies
+					</Button>
+				</Nav.Link>
+				<Nav.Link eventKey="3">
+					Education & History
+				</Nav.Link>
+				
+				<NavDropdown title="Projects" id="nav-dropdown">
+					<NavDropdown.Item eventKey="3.1">
+						<Button>
+							Scheduler
+						</Button>
+					</NavDropdown.Item>
+				</NavDropdown>
+
+				<Nav.Link eventKey="5">
+					Contact
+				</Nav.Link>
+			</Nav.Item>
+		</Nav>
+	);
+}
+
+function NavDropdownExample() {
+  const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
+
+  return (
+    <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
+      <Nav.Item>
+        <Nav.Link eventKey="1" href="#/home">
+          NavLink 1 content
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="2" title="Item">
+          NavLink 2 content
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="3" disabled>
+          NavLink 3 content
+        </Nav.Link>
+      </Nav.Item>
+      <NavDropdown title="Dropdown" id="nav-dropdown">
+        <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
+      </NavDropdown>
+    </Nav>
+  );
+}
 
 export default function App() {	
 	const [active, setActive] = useState("");
@@ -38,6 +101,7 @@ export default function App() {
 	  		<div className="header-section">
 				<NameContainer />
 				<Navbar className="nav-section">
+					{MainNav()}
 					<ButtonGroup className="nav-buttons">
 						<Button variant="outline-primary" onClick={() => setActive("about")}>About Me</Button>{' '}
 						<Button variant="outline-secondary" onClick={() => setActive("skills-academics")}>Skills & Technologies</Button>{' '}
