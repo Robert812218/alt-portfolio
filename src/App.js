@@ -27,36 +27,9 @@ function NameContainer() {
 }
 
 
-function Naveroni({props}) {
-	return (
-		<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-			<Container>
-				<Navbar.Brand href="#home">
-					ROBERT KELLY
-				</Navbar.Brand>
-				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-				<Navbar.Collapse id="responsive-navbar-nav">
-					<Nav className="me-auto">
-						<Nav.Link>ABOUT ME</Nav.Link>
-						<Nav.Link>SKILLS</Nav.Link>
-						<Nav.Link>HISTORY</Nav.Link>
-						<Nav.Link>PROJECTS</Nav.Link>
-						<Nav.Link>CONTACT</Nav.Link>
-						<Nav.Link><a href="https://github.com/Robert812218">GITHUB</a></Nav.Link>
-						<Nav.Link>LINKEDIN</Nav.Link>
-					</Nav>
-				</Navbar.Collapse>
-			</Container>
-		</Navbar>
-	);
-}
 
 export default function App() {	
 	const [active, setActive] = useState("");
-		
-
-	
-	
 		
 
 	return (

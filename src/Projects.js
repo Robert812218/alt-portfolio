@@ -3,52 +3,6 @@ import "./Projects.css";
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 
-function CardExample() {
-  return (
-    <CardGroup>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.{' '}
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-    </CardGroup>
-  );
-}
 
 function ProjectCards() {
 	return (
@@ -124,20 +78,10 @@ function ProjectCards() {
 				<Card.Img variant="bottom" src="holder.js/100px160" />
 			</Card>
 
-			<Card>
-				<Card.Header>
-					<a href="https://github.com/Robert812218/tinyapp">Tinyapp</a>
-				</Card.Header>
-				<Card.Body>
-					<Card.Text>
-						A site that lets users shorten long URLs.
-					</Card.Text>
-					<Card.Img variant="bottom" src="holder.js/100px160" />
-				</Card.Body>
-			</Card>
 		</CardGroup>
 	);
 }
+
 
 
 export default function Projects() {
@@ -148,6 +92,9 @@ export default function Projects() {
 	return (
 		<div className="projects-container">
 			{ProjectCards()}
+			<div className="gallery-component">
+				{TestCards()}
+			</div>
 		</div>
 	);
 }
