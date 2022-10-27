@@ -15,6 +15,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Card from 'react-bootstrap/Card';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import TestPage from './TestPage';
 
 
 function NameContainer() {
@@ -101,13 +102,13 @@ export default function App() {
 	  		<div className="header-section">
 				<NameContainer />
 				<Navbar className="nav-section">
-					{MainNav()}
 					<ButtonGroup className="nav-buttons">
 						<Button variant="outline-primary" onClick={() => setActive("about")}>About Me</Button>{' '}
 						<Button variant="outline-secondary" onClick={() => setActive("skills-academics")}>Skills & Technologies</Button>{' '}
 						<Button variant="outline-warning" onClick={() => setActive("history")}>Education & History</Button>{' '}
 						<Button variant="outline-info" onClick={() => setActive("projects")}>Projects</Button>{' '}
 						<Button variant="outline-success" onClick={() => setActive("contact")}>Contact</Button>{' '}
+						<Button onClick={() => setActive("test-page")}>Test Page</Button>
 					</ButtonGroup>
 				</Navbar>
 	  		</div>
@@ -136,6 +137,11 @@ export default function App() {
 				{active === "contact" && 
 					<div className="section-wrapper">
 						<Contact />
+					</div>
+				}
+				{active == "test-page" &&
+					<div className="section-wrapper">
+						<TestPage />
 					</div>
 				}
 			</div>

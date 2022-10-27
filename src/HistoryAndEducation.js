@@ -69,7 +69,9 @@ function History() {
 	);
 }
 export default function HistoryAndEducation() {
-	
+	const [view, setView] = useState("");
+
+
 	return (
 		<div className="education-history-container">
 			<Education />

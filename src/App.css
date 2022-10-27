@@ -30,6 +30,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	animation: fadeIn 0.5s;
+	background: darkgray;
 }
 
 
@@ -37,6 +38,7 @@ body {
 	margin: 1em;
 	padding: 1%;
 	background-color: rgba(255,255,255,0.5);
+	
 }
 
 .nav-section {
