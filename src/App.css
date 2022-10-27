@@ -1,7 +1,9 @@
 body {
 	width: 100vw;
 	height: 100vh;
-	background-image: url("../public/images/Muttart_Conservatory.jpg");
+	/* background-image: url("../public/images/Muttart_Conservatory.jpg"); */
+	background-image: url("../public/images/mountain-background.jpg");
+	background-size: auto;
 }
 
 .app-container {
@@ -22,15 +24,15 @@ body {
 
 /* Page top */
 .header-section {
-	width: 90%;
-	height: 10%;
+	width: 90vw;
+	height: 10vh;
 	margin: 1rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
 	animation: fadeIn 0.5s;
-	background: darkgray;
+	border: 5px solid red;
 }
 
 
@@ -64,11 +66,11 @@ body {
 .render-area {
 	display: flex;
 	justify-content: center;
-	overflow: scroll;
+	overflow: hidden;
 	align-items: center;
 	border: 5px solid red;
-	width: 80vw;
-	height: 50vh;
+	width: 90vw;
+	height: 80vh;
 	animation: fadeIn 3s;
 }
 
