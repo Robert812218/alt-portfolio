@@ -41,6 +41,7 @@ function History() {
 		<ListGroup as="ul" className="history-component">
 			<h1>HISTORY</h1>
 				<div className="job-container">
+					<h1>GET RID OF THIS - ADD 'FULL STACK WEB DEVELOPER TRANSITIONING FROM CARPENTRY' - PASSION FOR CREATING/BUILDING THE PHYSICAL AND DIGITAL WORLD</h1>
 					<h3>Web Development | Freelance | Remote</h3>
 					<h4>Oct 2022 - Present</h4>
 				</div>
