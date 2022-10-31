@@ -205,8 +205,15 @@ const SocialLinks = props => {
 }
 
 export default function TestUI() {
+	// make menuState false
+	
+
 	return (
-		<React.Fragment>
-		</React.Fragment>
+		      <React.Fragment>
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
+      </React.Fragment>
 	);
 }
