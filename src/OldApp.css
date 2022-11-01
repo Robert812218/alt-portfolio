@@ -1,0 +1,80 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	/* background-image: url("../public/images/Muttart_Conservatory.jpg"); */
+	background-image: url("../public/images/mountain-background.jpg");
+	background-size: auto;
+}
+
+.app-container {
+	border: 5px solid red;
+	height: 100%;
+	display: flex;
+	align-items: stretch;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Name container */
+.header-wrapper {
+	border: 3px solid red;
+}
+
+
+/* Page top */
+.header-section {
+	width: 90vw;
+	height: 10vh;
+	margin: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	animation: fadeIn 0.5s;
+	border: 5px solid red;
+}
+
+
+.header-wrapper {
+	margin: 1em;
+	padding: 1%;
+	background-color: rgba(255,255,255,0.5);
+	
+}
+
+.nav-section {
+	margin: 1em;
+	justify-content: space-around;
+	align-items: center;
+	border: 5px solid red;
+	
+}
+
+.direction-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+/* Page body */
+.render-area {
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	align-items: center;
+	border: 5px solid red;
+	width: 90vw;
+	height: 80vh;
+	animation: fadeIn 3s;
+}
+
+.section-wrapper {
+	display: flex;
+
+}
