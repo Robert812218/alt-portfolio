@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./HistoryAndEducation.css";
 import ListGroup from "react-bootstrap/ListGroup";
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
@@ -48,8 +49,7 @@ function History() {
 		
 	);
 }
-	
-function AAAAA() {
+export const HistoryAndEducation = () => {
 	const [view, setView] = useState("");
 
 
@@ -61,12 +61,3 @@ function AAAAA() {
 	);
 }
 
-
-export default function HistoryAndEducation() {
-	return (
-		<div>
-			<h1>AAAA</h1>
-		</div>
-	);
-}
-export default HistoryAndEducation;
